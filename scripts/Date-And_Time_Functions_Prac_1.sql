@@ -18,7 +18,7 @@ SELECT
 	DATETRUNC(minute, creationTime) AS [Reset Sec], --- DataType DATETIME
 	DATETRUNC(day, creationTime) AS [All Time Reset],
 	--- FORMAT Examples
-	---FORMAT(creationTime, 'ddd') AS [Short DAY] -- NOT Workins for DataType issues
+	---FORMAT(creationTime, 'ddd') AS [Short DAY] -- NOT Working for DataType issues
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'ddd') AS [Short DAY],
 	/*---Note: Using DATETIME2 is generally better than DATETIME 
 	as it handles the full 7 decimal 
@@ -28,3 +28,4 @@ SELECT
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'dd-MM-yyyy') AS [EURO Format]
 
 FROM orders
+

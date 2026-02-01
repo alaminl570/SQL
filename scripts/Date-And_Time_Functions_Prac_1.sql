@@ -27,5 +27,6 @@ SELECT
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'MM-dd-yyyy') AS [USA Format],
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'dd-MM-yyyy') AS [EURO Format]
 
-FROM orders
+FROM orders;
+
 

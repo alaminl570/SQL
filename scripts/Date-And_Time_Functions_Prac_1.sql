@@ -1,3 +1,7 @@
+/* ==============================================================================
+   SQL Date & Time Functions
+-------------------------------------------------------------------------------*/
+
 SELECT
 	creationTime AS [Creation Time],
 	DAY(creationTime) AS Day, --- DataType INT
@@ -22,4 +26,5 @@ SELECT
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'MMM') AS [Short Month],
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'MM-dd-yyyy') AS [USA Format],
 	FORMAT(TRY_CAST(creationTime AS DATETIME2), 'dd-MM-yyyy') AS [EURO Format]
+
 FROM orders

@@ -1,4 +1,4 @@
-/*-------------** WINODOW FUNCTIONS **---------------
+/*-------------** WINDOW FUNCTIONS **---------------
 Perform calculations (e.g. aggregation)
 on a specific subset of data,
 without losing the level of details of rows.
@@ -106,7 +106,7 @@ FROM Orders;
 -- Defines a subset of rows within each window
 that is relevant for the calculation.
 
-Rules: 1. Frame clause can only be used together with order by clause.
+Rules: 1. The frame clause can only be used together with order by clause.
 *---*  2. Lower value must be BEFORE the higher value.
 
 SQL TASK: EXAMPLE
@@ -145,4 +145,5 @@ SELECT
 FROM Orders;
 
 --- SQL uses Default Frame, if ORDER BY is used without FRAME
+
 --OVER (PARTITION BY OrderStatus ORDER BY OrderDate ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
